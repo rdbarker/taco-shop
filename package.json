@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/rdbarker/taco-shop/issues"
   },
-  "homepage": "https://github.com/rdbarker/taco-shop#readme"
+  "homepage": "https://github.com/rdbarker/taco-shop#readme",
+  "devDependencies": {
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
+  }
 }
