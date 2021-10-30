@@ -1,14 +1,19 @@
-const createElement = (tag,parentSelector="body",text="",cssClasses="",source="") => {
+const createElement = ({tag="div",parent="",inner="",css="",src=""}) => {
     const element = document.createElement(tag);
-    if (cssClasses) element.classList = cssClasses;
-    if (source) element.src = source;
-    if (text) element.textContent = text;
-    if (typeof parentSelector === 'string' || parentSelector instanceof String){
-        const parent = document.querySelector(parentSelector);
-        parent.appendChild(element);
+    console.log(inner)
+    if (css) element.classList = css;
+    if (src) element.src = src;
+    if (inner) {
+        if (typeof inner === "string") element.textContent = inner;
+        else {element.appendChild(inner);}
     }
-    else {
-        parentSelector.appendChild(element);
+    if (parent){
+        if (typeof parent === 'string' || parent instanceof String){
+            document.querySelector(parent).appendChild(element);
+        }
+        else {
+            parent.appendChild(element);
+        }
     }
     return element
 }
