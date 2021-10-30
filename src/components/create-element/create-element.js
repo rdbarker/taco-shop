@@ -1,8 +1,9 @@
-const createElement = ({tag="div",parent="",inner="",css="",src=""} = {}) => {
+const createElement = ({tag="div",parent="",inner="",css="",src="",id=""} = {}) => {
     const element = document.createElement(tag);
     console.log(inner)
     if (css) element.classList = css;
     if (src) element.src = src;
+    if (id) element.id = id;
     if (inner) {
         if (typeof inner === "string") element.textContent = inner;
         else {element.appendChild(inner);}
