@@ -1,9 +1,15 @@
 import './style.css';
 import createHome from './components/create-home/create-home';
 import createElement from './components/create-element/create-element.js';
+import createMenu from './components/create-menu/create-menu';
+import createContact from './components/create-contact/create-contact';
+
 
 function changePage(){
-    console.log(this.id)
+    content.innerText = "";
+    if (this.id==="home") createHome(content)
+    if (this.id==="menu") createMenu(content)
+    if (this.id==="contact") createContact(content)
 }
 
 const content = createElement({id:"content"})
@@ -13,3 +19,4 @@ const menuList = createElement({tag:"ul",parent:menuContainer})
 const home = createElement({tag:"li",id:"home",parent:menuList,inner:"Home",click:changePage})
 const menu = createElement({tag:"li",id:"menu", parent:menuList,inner:"Menu",click:changePage})
 const contact = createElement({tag:"li",id:"contact",parent:menuList,inner:"Contact",click:changePage})
+createHome(content);
