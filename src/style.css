@@ -1,0 +1,18 @@
+body{
+    font-size: 32px;
+}
+.page-title{
+    text-align: center;
+    margin: 8px;
+}
+.menu-container ul{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 0;
+    margin: 8px;
+}
+.menu-container ul{
+    cursor: pointer;
+}
