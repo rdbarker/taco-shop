@@ -3,8 +3,13 @@ const createElement = (tag,parentSelector="body",text="",cssClasses="",source=""
     if (cssClasses) element.classList = cssClasses;
     if (source) element.src = source;
     if (text) element.textContent = text;
-    const parent = document.querySelector(parentSelector);
-    parent.appendChild(element);
+    if (typeof parentSelector === 'string' || parentSelector instanceof String){
+        const parent = document.querySelector(parentSelector);
+        parent.appendChild(element);
+    }
+    else {
+        parentSelector.appendChild(element);
+    }
     return element
 }
 
