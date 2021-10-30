@@ -1,4 +1,4 @@
-const createElement = ({tag="div",parent="",inner="",css="",src=""}) => {
+const createElement = ({tag="div",parent="",inner="",css="",src=""} = {}) => {
     const element = document.createElement(tag);
     console.log(inner)
     if (css) element.classList = css;
