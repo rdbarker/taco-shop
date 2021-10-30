@@ -1,0 +1,13 @@
+.page-title{
+    text-align: center;
+}
+.menu-container ul{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 0;
+}
+.menu-container ul{
+    cursor: pointer;
+}
