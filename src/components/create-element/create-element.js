@@ -15,6 +15,9 @@ const createElement = ({tag="div",parent="",inner="",css="",src=""} = {}) => {
             parent.appendChild(element);
         }
     }
+    else{
+        document.querySelector("body").appendChild(element);
+    }
     return element
 }
 
