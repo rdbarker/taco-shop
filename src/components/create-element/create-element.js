@@ -1,6 +1,5 @@
-const createElement = ({tag="div",parent="",inner="",css="",src="",id=""} = {}) => {
+const createElement = ({tag="div",parent="",inner="",css="",src="",id="",click} = {}) => {
     const element = document.createElement(tag);
-    console.log(inner)
     if (css) element.classList = css;
     if (src) element.src = src;
     if (id) element.id = id;
@@ -18,6 +17,9 @@ const createElement = ({tag="div",parent="",inner="",css="",src="",id=""} = {}) 
     }
     else{
         document.querySelector("body").appendChild(element);
+    }
+    if (click){
+        element.addEventListener("click",click)
     }
     return element
 }
