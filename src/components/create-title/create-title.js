@@ -1,4 +1,5 @@
-import createElement from '../create-element/create-element';
+import createElement from '../create-element/create-element.css';
+import './create-element.css';
 
 const title = createElement({tag:"h1",inner:"Tacos del JS",parent:"#container"})
 const menuContainer = createElement({parent:"#container",css:"menu-container"})
